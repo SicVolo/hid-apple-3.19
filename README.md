@@ -7,9 +7,9 @@ A Linux HID Apple driver fixed for the early 2015 Apple MacBook Pro  12,1,  for 
 
 Hardcodes default Ubuntu 15.05 kernel parameters (DEBUG_FS=Y, HIDRAW=Y)
 
-[kui/hid-apple][] driver is a fixed hid-apple driver for the above problem.
+[SicVolo/hid-apple-3.19] driver is a fixed hid-apple driver for the above problem.
 
-[kui/hid-apple]: https://github.com/kui/hid-apple "kui/hid-apple · GitHub"
+[SicVolo/hid-apple-3.19]: https://github.com/SicVolo/hid-apple-3.19 "SicVolo/hid-apple-3.19 · GitHub"
 
 Installation
 ---------------------
