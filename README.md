@@ -19,9 +19,9 @@ make
 sudo make install
 ```
 
-Test
+Test by removing and reinstalling the hid stack. This has to be a one-liner because you lose keyboard input after the first module removal. Another way to test is to run the update-initramfs (see below) and reboot your system.
 ```
-modprobe -r hid_generic && modprobe -r hid_microsoft && modprobe -r usbhid && modprobe -r hid_apple && modprobe -r hid && modprobe hid  && modprobe usbhid && modprobe hid_generic && modprobe hid_apple
+modprobe -r hid_generic; modprobe -r usbhid; modprobe -r hid; modprobe hid; modprobe usbhid; modprobe hid_generic; modprobe hid_apple
 ```
 
 If it's fine make it permanent
