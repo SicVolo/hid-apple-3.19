@@ -5,7 +5,7 @@ A Linux HID Apple driver fixed for the early 2015 Apple MacBook Pro  12,1,  for 
 
 "fn" key of does not work on a bundled hid-apple driver, because it's not recognizing new USB driver.
 
-Hardcodes default Ubuntu 15.05 kernel parameters (DEBUG_FS=Y, HIDRAW=Y)
+Hardcodes default Ubuntu 15.04 kernel parameters (DEBUG_FS=Y, HIDRAW=Y)
 
 [SicVolo/hid-apple-3.19] driver is a fixed hid-apple driver for the above problem.
 
