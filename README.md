@@ -1,14 +1,14 @@
 hid-apple
 ======================
 
-Patched keyboard driver for the early 2015 Apple MacBook Pro  12,1,  for  Linux kernel 3.19,
-Enables teh "fn" key that does not work on a bundled hid-apple driver, because it's not recognizing new USB driver.
+Patched keyboard driver for the early 2015 Apple MacBook Pro  12,1, for Linux kernel 3.19,
+Enables the "fn" key that does not work on a bundled hid-apple driver, because it's not recognizing new USB driver.
 
 Tested on Kubuntu 15.04
 
 Hardcodes default Ubuntu 15.04 kernel parameters (DEBUG_FS=Y, HIDRAW=Y)
 
-The fixed touchpad driver is here - https://github.com/SicVolo/bcm5974-3.19 "SicVolo/bcm5974-3.19 · GitHub"
+The fixed touchpad driver is here - https://github.com/SicVolo/bcm5974-3.19
 
 Installation
 ---------------------
