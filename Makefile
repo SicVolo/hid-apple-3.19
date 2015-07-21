@@ -2,12 +2,10 @@ TARGET		:= $(shell uname -r)
 HOME		 = $(shell pwd)
 KERNEL_MODULES	:= /lib/modules/$(TARGET)
 KERNEL_BUILD	:= $(KERNEL_MODULES)/build
-DRIVER		:= hid-apple
-MOD_SUBDIR	 = drivers/hid
+DRIVER		:= bcm5974
+MOD_SUBDIR	 = drivers/input/mouse
 
-hid-y		:= hid-core.o hid-input.o hid-debug.o hidraw.o
-
-obj-m	:= hid.o $(DRIVER).o
+obj-m	:= $(DRIVER).o
 
 MAKEFLAGS += --no-print-directory
 
@@ -20,5 +18,4 @@ modules clean:
 
 install: modules
 	install --backup --mode 644 --group root --owner root $(DRIVER).ko $(KERNEL_MODULES)/kernel/$(MOD_SUBDIR)
-	install --backup --mode 644 --group root --owner root hid.ko $(KERNEL_MODULES)/kernel/$(MOD_SUBDIR)
 	depmod -a $(TARGET)
