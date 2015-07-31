@@ -9,17 +9,6 @@ Fixes the non-functioning touchpad right click and the multitouch.
 
 Hardcoded with the default Ubuntu 15.04 kernel parameters (DEBUG_FS=Y, HIDRAW=Y)
 
-DKMS Installation
------------------
-
-1. Ensure DKMS is installed: `sudo apt-get install dkms`
-2. Add the module to DKMS: `sudo dkms add .`
-3. Build the module: `sudo dkms build hid-apple/1.0`
-4. Install the module: `sudo dkms install hid-apple/1.0`
-
-This should ensure the module is automatically built remains built
-when newer version of the kernel packages are installed.
-
 Manual Installation
 -------------------
 
@@ -42,3 +31,15 @@ For swapping alt and opt do:
 ```
 echo options hid_apple swap_opt_cmd=1 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 ```
+
+DKMS Installation 
+-----------------
+(not fully tested yet)
+
+1. Ensure DKMS is installed: `sudo apt-get install dkms`
+2. Add the module to DKMS: `sudo dkms add .`
+3. Build the module: `sudo dkms build hid-apple/1.0`
+4. Install the module: `sudo dkms install hid-apple/1.0`
+
+This should ensure the module is automatically built remains built when newer version of the kernel packages are installed.
+
