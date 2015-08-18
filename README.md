@@ -21,13 +21,13 @@ Put the modules into the init ram fs
 ```
 sudo update-initramfs -u
 ```
+Reboot.
 
-Normal options apply. For example if you want to down-priority on Fn action on boot do
+Normal module configuration options apply. For example if you want to invert the fn key function, i.e. use F1-F12 keys without pressing the Fn, then do
 ```
 echo options hid_apple fnmode=2 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 ```
-
-For swapping alt and opt do:
+It will become active on the next reboot. For swapping alt and opt do:
 ```
 echo options hid_apple swap_opt_cmd=1 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 ```
