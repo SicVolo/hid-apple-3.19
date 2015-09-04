@@ -3,6 +3,8 @@ hid-apple
 
 A Linux HID Apple driver fixed for the early 2015 Apple MacBook Pro 12,1, for Linux kernel 3.19.
 
+The patched driver is based on the fixes published [here]( https://bugzilla.kernel.org/show_bug.cgi?id=96771). The fixes made it into Kernel 4.2
+
 Enables the "fn" key that does not work on a bundled hid-apple driver, because it's not recognizing new USB driver.
 
 Fixes the non-functioning touchpad right click and the multitouch.
