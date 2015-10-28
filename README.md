@@ -33,6 +33,10 @@ It will become active on the next reboot. For swapping alt and opt do:
 ```
 echo options hid_apple swap_opt_cmd=1 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 ```
+If the tilde (~) key produces something else, like arrows (< >), try:
+```
+echo 0 > /sys/module/hid_apple/parameters/iso_layout
+```
 
 DKMS Installation 
 -----------------
